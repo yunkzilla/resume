@@ -65,3 +65,9 @@ h2 {
     object-fit: contain; /* Allow the width to adjust automatically based on aspect ratio */
     margin-bottom: 20px; /* Add some space between images */
 }
+
+.collaboration-box:hover .hover-image,
+.collaboration-box2:hover .hover-image2 {
+    opacity: 1; /* Show the image on hover */
+    /* Remove the transform property */
+}
