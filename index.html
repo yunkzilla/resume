@@ -9,18 +9,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>caught you looking</title>
     <style>
-        .image-container {
-  height: 600px;
+/* one job per class */
+.image-container,
+.image-frame {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4; /* just so you can see it */
+  background: #f4f4f4;
+  height: 600px;             /* if you want tall “hero” areas */
+  margin-bottom: 24px;       /* prevents visual overlap */
 }
 
-.image-container img {
-  height: 100%;
-  width: auto;
+/* a wrapper for text + image stack */
+.block {
+  display: flex;
+  flex-direction: column;     /* stack the headings above the image */
+  gap: 12px;
+  margin-bottom: 24px;
 }
+
+/* don’t force 100% height unless you really need it */
+.image-container img,
+.image-frame img {
+  max-height: 100%;
+  width: auto;
+  display: block;
+}
+
 
         * {
             box-sizing: border-box;
@@ -129,23 +144,22 @@
     <div>
         <h3><a href="./assets/grouplove.pdf" target="_blank">recap deck</a></h3>
     </div>
-    <div class="image-container">
-        <a href="./assets/grouplove.pdf" target="_blank">
-            <img src="./assets/grouplove hero with logos_.png" class="hover-image2" alt="A picture of the band Grouplove in a car. All the members are present">
-        </a>
-    </div>
+<div class="image-container">
+  <a href="./assets/grouplove.pdf" target="_blank">
+    <img src="./assets/grouplove hero with logos_.png" class="hover-image2" alt="A picture of the band Grouplove in a car. All the members are present">
+  </a>
 </div>
-    </div>
-    
-    <div class="image-container">
-        <h3>numilk rollout</h3>
-        <h3><a href="https://www.youtube.com/watch?v=JKp9MDglDu8&t=1s" target="_blank">"if not now when?"</a></h3>
-        <div class="image-container">
-            <a href="https://www.youtube.com/watch?v=JKp9MDglDu8&t=1s">
-                <img src="./assets/if not now when.png" class="hover-image" alt="A picture of the band grouplove in a car. All the members are present">
-            </a>
-        </div>
-    </div>
+
+<div class="block">
+  <h3>numilk rollout</h3>
+  <h3><a href="https://www.youtube.com/watch?v=JKp9MDglDu8&t=1s" target="_blank">"if not now when?"</a></h3>
+  <div class="image-frame">
+    <a href="https://www.youtube.com/watch?v=JKp9MDglDu8&t=1s" target="_blank" rel="noopener">
+      <img src="./assets/if not now when.png" class="hover-image" alt="A picture of the band grouplove in a car. All the members are present">
+    </a>
+  </div>
+</div>
+
   
     <h3><b>work</b></h3>
      <p>2025 - current</p>
